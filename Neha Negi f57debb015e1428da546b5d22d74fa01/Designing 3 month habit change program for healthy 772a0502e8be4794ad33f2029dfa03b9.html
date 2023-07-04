@@ -1,0 +1,720 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Designing 3 month habit change program for healthy eating </title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-interactiveBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="772a0502-e8be-4794-ad33-f2029dfa03b9" class="page sans"><header><div class="page-header-icon undefined"><img class="icon" src="https://www.notion.so/icons/dining_gray.svg"/></div><h1 class="page-title">Designing 3 month habit change program for healthy eating </h1><p class="page-description"></p></header><div class="page-body"><p id="25dc61dd-2317-43e6-8fe1-79947449ce0e" class="">
+</p><p id="25c3f8be-22c2-4c4c-9903-93c7cdd5398d" class="">I applied for a Behavioural Design position at a company, calling it XYZ for now.  XYZ trains its user’s to lose weight and get healthy in a sustainable manner. I was given an assignment for which I designed my solution using existing research done on behaviour change.</p><h2 id="bb0eba90-7654-450d-8d2f-5fe96b2aa4d3" class=""><mark class="highlight-orange">Assignment</mark></h2><p id="ac5db142-d0f8-4973-9771-4b68a40378bc" class=""><strong>Situation :</strong></p><p id="2517472a-8601-448d-846d-af3654acbdcf" class="">Neha is a 35 year old IT professional living in Bangalore with her husband, 2 kids and in-laws.
+Her current BMI is 32 and she has been struggling to loose weight since last 3 years. She has
+tried enrolling into weight loss programs of some dieticians but results haven’t been up to the
+mark. In one of the programs she did loose 8Kgs but as soon as she left the program she
+regained 10 KGs within next 6 months. In other programs she didn’t loose significant weight.</p><ol type="1" id="28ba25d5-8a2d-4be0-8710-cff5d99e1b85" class="numbered-list" start="1"><li>A) Eating style - skips breakfast, eats home cooked food prepared by her cook for lunch
+and dinner, but over eats often. Sundays the family eats outside. Often orders desserts
+late in the night.</li></ol><ol type="1" id="1e597c00-7d4a-49ed-899f-295bd9b9606d" class="numbered-list" start="2"><li>B) Stress levels - Feels her work is pretty hectic and stressful</li></ol><ol type="1" id="8506e5f7-27cb-455c-952b-99bb14a46aa5" class="numbered-list" start="3"><li>C) Motivation to loose weight - her motivation keeps fluctuating, some days its too low,<p id="615aa0ea-38bb-4931-8368-c07a6a08a021" class="">some days its at OK levels</p></li></ol><ol type="1" id="6e652c27-843c-42d1-97a3-2541f64ef765" class="numbered-list" start="4"><li>D) Sleeping pattern - sleeps between 12-1am and wakes up at 9am</li></ol><p id="1dd923d1-897c-4414-afeb-f02fd85e5947" class=""><strong>Question :</strong></p><p id="aac6c1ad-4067-471c-9deb-9af72b7f7e27" class="">Prepare a 3 month behavior intervention program to correct her snacking and over eating
+habits, with an objective of long term behavior shift. Your response should include, but not
+limited the following -</p><ol type="1" id="9dcf4bb8-6abc-4317-b2c6-64affeb274e6" class="numbered-list" start="1"><li>A) Name of behaviour science theories used</li></ol><ol type="1" id="dee72d6b-4c11-42b4-ab82-2ca8bb614e25" class="numbered-list" start="2"><li>B) Mode of delivery of these interventions to Neha (Phone call, Videos, SMS, WhatsApp<p id="c099eb69-e082-45ac-a68a-75eed793513c" class="">etc)</p></li></ol><ol type="1" id="515490f1-3080-46ed-91d2-8e294447fe36" class="numbered-list" start="3"><li>C) How to track and measure whether these interventions are working or not</li></ol><ol type="1" id="555d53b0-f7db-4ef0-8a2a-bddf98461ca2" class="numbered-list" start="4"><li>D) Kindly make reasonable assumptions wherever you feel like, do mention all the<p id="4e946de2-c4ca-4f55-88be-422dbd12367e" class="">assumptions at the end</p></li></ol><p id="9a91264f-96bd-42be-b107-6cdad47da655" class="">
+</p><h2 id="bd84ac05-f3a5-4a5c-abf7-9fa9971454cf" class=""><mark class="highlight-orange">My Solution</mark></h2><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3">Month #1 - Taking baby steps </summary><div class="indented"><p id="c8c5ea2d-24d9-452b-8239-a0c1dc059753" class="">
+</p><figure id="03463886-a03f-4f12-8a43-7413c2fc3094" class="image" style="text-align:center"><a href="https://images.unsplash.com/photo-1512846947153-55eb89716f77?ixlib=rb-4.0.3&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb"><img style="width:240px" src="https://images.unsplash.com/photo-1512846947153-55eb89716f77?ixlib=rb-4.0.3&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb"/></a></figure><ul id="8f516af9-a0a1-4b36-8e88-b44a3ab040af" class="bulleted-list"><li style="list-style-type:disc">Introduction to the program and letting Neha know that this is a behaviour change program more than a traditional fitness program. Weight loss is a secondary goal, but training her to ropewalk healthy habits is what our primary target will be. Setting a correct mindset before starting the program is important. This can be done via a handout given in an initial kit given to her or she can print it out herself. A hardcopy is preferred so Neha can have a physical access to the material and can keep it around her workplace or bedside table to read. We want her to be very thorough of this mindset of behaviour change.
+In case we are going for a kit, it can also include a merchandise small sized spoon, bowl and plate by XYZ. The spoon will be used as an intervention for mindfully consuming desserts or her late night cravings. The bowl and plate is to have portion control incorporated in her routine. Having the tools made accessible right away will set her in the right direction from the beginning. </li></ul><ul id="b87ec788-56eb-40e7-bcbe-14e2d7e68ad5" class="bulleted-list"><li style="list-style-type:disc">Also it is important to tell her that her strategies for behaviour change will be guided by us, but eventually she will be the one steering the strategies in ways which fits well in her life. We provide her the tools and skill training, which she will be able to apply by herself over time. This sets autonomy in her approach which is a key factor for driving motivation according to the Self Determination Theory of motivation.</li></ul><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="515e4722-e92a-4d91-bf3c-45585fea9d6d"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">A study of behavioural aspects of weight maintenance and relapse among American women indicated that developing individual strategies as opposed to following a set programme, monitoring weight, eating a healthy diet, having a greater ability to cope with problems and social support were common to those maintaining weight (Kayman <em>et al</em>. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6860298/#mcn12103-bib-0023">1990</a>).</div></figure><ul id="d5696250-7684-4286-8e41-f15494b80c0f" class="bulleted-list"><li style="list-style-type:disc">Conduct coaching sessions through video call after end of every week. Video call is preferred because research has shown that a successful initiation of behaviour change program depends on how ‘energising’ the relationship between healthcare provider and patient is. Video call allows for a more in depth, intimate relationship.</li></ul><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="91fe628f-2069-4531-8af6-13b80acf543a"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><strong>Ref</strong> : Bertz, F., Sparud-Lundin, C., &amp; Winkvist, A. (2015). Transformative Lifestyle Change: key to sustainable weight loss among women in a post-partum diet and exercise intervention. <em>Maternal &amp; child nutrition</em>, <em>11</em>(4), 631–645. https://doi.org/10.1111/mcn.12103</div></figure><ul id="07859dbc-b177-440d-a489-21cda96c0f38" class="toggle"><li><details open=""><summary>4 coach sessions for first month, scheduled every week to deliver the following learnings and methods: </summary><ul id="583ba799-2021-4ddb-b878-eb92da45a889" class="bulleted-list"><li style="list-style-type:disc">First session is to find out specific needs, pain and pleasure points of Neha’s current eating and snacking habits, so that her plan can be tweaked to cater her needs. For example assuming in her case that when she wakes up at 9, she immediately starts getting ready for work. We find out from the session why she is not giving herself time in the morning to start her day and have a filling breakfast. If we can find a way to insert an hour extra in her morning schedule, she can not just have a wholesome breakfast, but also give some time for self reflection, which she probably is missing right now. She might actually not be practising self care at all, given her time is distributed between work and family. Making her more in tune with her self and set a good self relationship is important to have long term behaviour change.</li></ul><ul id="74af4913-27a0-4f7d-8f64-886655a188ab" class="bulleted-list"><li style="list-style-type:disc">Give her reading summaries in simple language of published research on health benefits by behaviour change, but also attach the research papers along side. This is done to let her know that this strategy works and we know what we are doing. We need to establish authority as experts.</li></ul><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="89a6189f-3640-4350-b929-fd0510c6f989"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">The principle of authority is a psychological phenomenon that suggests people are more likely to comply with a request or follow instructions when it comes from a figure perceived as an authority or expert in a particular field.</div></figure><ul id="4de1bbdf-ae64-444f-afbf-f988d6ec664d" class="bulleted-list"><li style="list-style-type:disc">Introduce her to the idea of mindful eating and give her material to read, listen or watch. For eg if she is more into reading books, we can suggest her non fictions like ‘Mindful eating on the go’ or if she is into reading blogs we can suggest something like <a href="https://www.hsph.harvard.edu/nutritionsource/mindful-eating/#:~:text=Mindful%20eating%20focuses%20on%20your,your%20responses%20to%20those%20cues.%20%5B">Stanford blog on mindful eating</a>. Podcasts, videos, audiobooks, anything that she is comfortable with and can adjust in her daily schedule. </li></ul><ul id="92f5f3f9-638c-469e-9297-08a05b0d3c93" class="bulleted-list"><li style="list-style-type:disc">All her meals should be in the small bowl and plate provided by us, to practice portion control. Having separate Fitju bowl and plate provided by us, sets an anchor point for all her further meals. After that even when she goes out and doesn’t has access to these utensils, she will have an idea of her portion size. </li></ul><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="a41359bd-376c-4e7c-83a6-f0e59cc6bbd1"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Anchoring is a judgment heuristic. Anchoring and other judgment heuristics, such as <a href="https://www.nngroup.com/articles/prospect-theory/">framing</a> and <a href="https://www.nngroup.com/articles/priming/">priming</a>, are helpful in expediting everyday decisions, particularly in the absence of information, resources, or time. They <a href="https://www.nngroup.com/articles/first-impressions-human-automaticity/">tend to be automatic</a> for most people and can sometimes lead to erroneous estimates or judgment calls.</div></figure><p id="d247fe56-ce5e-487a-9748-44a662f8e718" class="">It is also good for associating a reflective value for the brand Fitju (Don Norman’s emotional level of design). All designs have a reflective value, and for Fitju to stand out from its competitor, it is important <strong>to make Neha feel</strong> that we actually care for her health and are doing the best we can to support and nourish her. </p><ul id="6f2c4789-263f-4307-b830-7004ab3b122a" class="bulleted-list"><li style="list-style-type:disc">Lay down crucial <strong>initial</strong> <strong>rules</strong> of the program. These rules will be modified further as she progresses and gets comfortable with the existing rules and needs a higher challenge. 
+<strong>1) 15 minute rule</strong> : Every time she has an urge to order dessert or has any weak moment, she has to wait for 15 minutes before acting on it. During this wait time she needs to make an entry in her daily food journal mentioning :
+- what triggered her weak moment
+- what are her thoughts and feelings
+<strong>2) Fitju spoon rule:</strong> In case her urge to eat doesn’t go after 15 minutes, she will consume it with the small spoon given by Fitju. 
+<strong>3) Half plate rule : </strong>For her meals, half of her plate should be covered with vegetables or salad, one-quarter with lean protein (chicken, fish, or paneer), and one-quarter with whole grains (like brown rice or roti) 
+
+<span style="border-bottom:0.05em solid">Making lifestyle changes by exerting willpower and self‐control is perceived to require much mental energy. However, the perceived effort is reduced with the </span><span style="border-bottom:0.05em solid"><em>simplicity </em></span><span style="border-bottom:0.05em solid">of rules, as opposed to constantly reasoning with one self or others about what to do.
+</span>This learning has to be iterated over and over again and taught as a skill. Few readings and videos on this separately will help her imbibe and believe in the process. This is an important skill to have not just for healthy habits, but can be generalised for   any kind of behaviour control.
+(A ref video on will power and temptation-  <a href="https://www.youtube.com/watch?v=p5R_BtONquc">https://www.youtube.com/watch?v=p5R_BtONquc</a> )
+</li></ul><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="42fc6cf6-b4b4-46ae-98af-da5994a052a9"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><strong>Ref</strong>: Bertz, F., Sparud-Lundin, C., &amp; Winkvist, A. (2015). Transformative Lifestyle Change: key to sustainable weight loss among women in a post-partum diet and exercise intervention. <em>Maternal &amp; child nutrition</em>, <em>11</em>(4), 631–645. https://doi.org/10.1111/mcn.12103</div></figure><p id="494b5488-fdbc-4079-9c95-8004807c8ed9" class="">
+</p><ul id="21636463-363c-4964-ad80-6cfa07ea37a0" class="bulleted-list"><li style="list-style-type:disc">Inserting a self reflection module in the morning itself is to bring her attention to self and consciously think of herself.  She doesn’t has to write a journal in this module. That might be too much to ask for. Instead we can ease her process of journaling by giving her a structured monthly template, maybe on Notion itself, which just asks her given questions. Journaling is an important part of this plan, as research has shown time and again that self reflection <ul id="47e589fe-e2eb-4107-b8d1-fc83eba6e823" class="block-color-orange_background toggle"><li><details open=""><summary>Morning reflection questions</summary><ol type="1" id="4bb87f48-912d-40ff-aa71-4033a509d83d" class="numbered-list" start="1"><li>How do I feel physically and emotionally today? (Theory: Self-Awareness)<ul id="07a5a796-81bc-4801-926d-c8eb15693fb5" class="bulleted-list"><li style="list-style-type:disc">Research suggests that self-awareness plays a crucial role in behaviour change. By checking in with your physical and emotional state, you become more attuned to how your feelings may influence your eating behaviours.</li></ul></li></ol><ol type="1" id="ff7479f4-c958-4bb2-b2bb-a444b37fb6cc" class="numbered-list" start="2"><li>What are my intentions for eating today? (Theory: Theory of Planned Behaviour)<ul id="f34f2739-786b-4a27-b272-cd022054d982" class="bulleted-list"><li style="list-style-type:disc">The Theory of Planned Behaviour emphasises the importance of setting intentions and goals. By clearly defining your intentions for eating, you establish a sense of purpose and direction, increasing the likelihood of making mindful and healthy choices.</li></ul></li></ol><ol type="1" id="46e988e0-b37e-4ae8-99d3-74e4fb3df350" class="numbered-list" start="3"><li>What triggers may influence my eating habits today? (Theory: Stimulus-Response)<ul id="08b7e7e0-e908-4c3e-801e-93e53ae34756" class="bulleted-list"><li style="list-style-type:disc">Stimulus-response theory suggests that certain cues or triggers can prompt specific behaviours. By identifying potential triggers for unhealthy eating, such as stress, boredom, or social situations, you can proactively develop strategies to respond mindfully and make healthier choices.</li></ul></li></ol></details></li></ul><ul id="df96d31a-640a-44ee-8ab0-ee9447fb213f" class="block-color-orange_background toggle"><li><details open=""><summary>Night reflection questions</summary><ol type="1" id="71a0d587-54f7-40ac-89c3-df6fef3b28e3" class="numbered-list" start="1"><li>How did my emotions influence my food choices today? (Theory: Self-Awareness)<ul id="934547eb-54ef-47f8-8e2f-88f04bdeb742" class="bulleted-list"><li style="list-style-type:disc">Emotions can impact our food choices. By reflecting on your emotional state throughout the day, you can assess whether your eating habits were influenced by emotions such as stress, sadness, or boredom. </li></ul></li></ol><ol type="1" id="81398422-8f99-47bd-a47a-f3cfa69cd9fb" class="numbered-list" start="2"><li>How well did I adhere to my intentions for healthy eating? (Theory: Intention-Behaviour Gap, from the Theory of Planned behaviour )<ul id="8c2850cc-53cf-40e2-a0a5-61cb6b4a16d1" class="bulleted-list"><li style="list-style-type:disc">The intention-behaviour gap theory suggests that there can be a disconnect between our intentions and our actual behaviours. Assess how well you followed through with your intentions for healthy eating and in case there is a gap, try to reflect why. </li></ul></li></ol><ol type="1" id="c2dec128-36f1-4404-bb17-2065c3883352" class="numbered-list" start="3"><li>What external cues or triggers affected my eating today? (Theory: Stimulus-Response)<ul id="96e413d7-30cf-484e-ae5c-600e6305e01c" class="bulleted-list"><li style="list-style-type:disc">Environmental triggers theory suggests that external cues can prompt us to eat, even when not physically hungry. Reflect on any environmental triggers you encountered, such as food advertisements, social situations, or food availability, and consider how they influenced your eating habits.</li></ul></li></ol><ol type="1" id="f3500d46-543d-404e-a72e-3010fb202001" class="numbered-list" start="4"><li>What were the highlights and challenges of my eating habits today? (Theory: Self-Reflection)<ul id="8ad68424-4fea-4404-a513-8f1d3617ed3c" class="bulleted-list"><li style="list-style-type:disc">Self-reflection is a key component of behaviour change. By reviewing your eating habits, noting both positive and challenging moments, you become more aware of your behaviours and can identify areas for improvement.</li></ul><p id="21d3316f-dffb-46cc-8165-b345f07ff376" class="">
+</p></li></ol><p id="13e5217c-e6aa-496f-b713-56c6fcff579a" class="">
+</p><ol type="1" id="052c9fa2-3790-4ca6-9f88-75b3993a7a4f" class="numbered-list" start="1"><li>What strategies can I implement tomorrow to support my healthy eating goals? (Theory: Implementation Intentions)<ul id="2d2ee68d-4f25-44dc-ab5c-6c7032df8bbb" class="bulleted-list"><li style="list-style-type:disc">Implementation intentions theory focuses on making specific plans for behavior change. Identify actionable strategies you can implement the next day, such as meal prepping, packing healthy snacks, or seeking social support, to support your healthy eating goals.</li></ul></li></ol></details></li></ul></li></ul></details></li></ul></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3">Month #2 - Walking with support  </summary><div class="indented"><p id="7fe0c848-08b7-4697-80f5-0773e13507fe" class="">
+</p><figure id="a0ad2f41-2e00-47be-9460-b2e06158d67b" class="image" style="text-align:center"><a href="https://images.unsplash.com/photo-1599082779777-8edeb377cdef?ixlib=rb-4.0.3&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb"><img style="width:288px" src="https://images.unsplash.com/photo-1599082779777-8edeb377cdef?ixlib=rb-4.0.3&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb"/></a></figure><p id="0bea84ae-f542-479f-b1f2-756294246643" class="">
+</p><p id="2cb84fb0-8945-4fe3-852f-94f2c847a2d8" class="">Once Neha has learnt the tools and techniques in the first month and has applied them in her life, one activity at a time, second month is to gain mastery in them, all at once. Portion control, self reflection, applying the rules given, together in sync to be accommodated in her life.</p><p id="1a5c50cb-0e04-4d4d-a25b-4704c453cc33" class="">Coach’s job - Train Neha to stick to her tools and practice them regularly. Every week a video call session to iterate over the progress done and work on key findings and blockers. The coach will also update some rules according to her performance and bottlenecks during the 1st month. 
+</p><p id="b4a7eadc-0759-46d4-ae11-ffce1439ded1" class=""><strong>Rule additions :
+1) Dessert once a week : </strong>After practising delayed gratification of urges in first month and self reflecting on then, now Neha will be following stricter rule to have dessert only once a week.
+(other rules additions will depend on her performance and bottlenecks during first month)
+
+<strong>Whatsapp peer group:</strong>  During the second month she will be added to a peer group of 10-20 other people like her. This can be done on whatsapp. The goal of the group is to have people relate to each other through a shared common goal - including behaviour change in their lives. Everyone will be prompted every week to post about what bottlenecks they face this week and how did they overcome it. The prompts can be varied as the peer discussions evolve over time. 
+A lot of times, people just need to see that they are not alone and have other people who they can relate to. It helps in maintaining the motivation.
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="15a57277-d8c3-4359-a377-28dd7bd9986a"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Self Determination Theory of motivation (SDT):<ol type="1" id="cf682541-8aa4-4964-99ea-490ee700a9a2" class="numbered-list" start="1"><li>Autonomy: The need for autonomy refers to the desire to have a sense of control and volition over one&#x27;s actions. It involves feeling a sense of choice and self-direction in pursuing activities that are personally meaningful.</li></ol><ol type="1" id="44241bce-d8bc-4f5b-a80e-c380e29f457d" class="numbered-list" start="2"><li>Competence: The need for competence relates to the desire to feel effective and capable in one&#x27;s interactions and activities. It involves seeking opportunities to develop and master skills and experiencing a sense of achievement.</li></ol><ol type="1" id="80b45674-9e51-4d23-add1-1c0387addfa4" class="numbered-list" start="3"><li>Relatedness: The need for relatedness involves the desire to connect and establish meaningful relationships with others. It encompasses a sense of belonging, social support, and the feeling of being understood and cared for by others.</li></ol></div></figure><p id="d1a71dd4-8f76-48b2-9bc0-201904f7ab83" class="">The whatsapp group prompt activity is perfect to cover the competence and relatedness aspects. Telling stories of overcoming something difficult will make the person feel more competent and increase the motivation of the person. And reading to other people’s story of overcoming bottlenecks will help create an emotional connect and contagion to other readers, and also suggest ways they might as well do in case they find a similar problem. Eg someone posted how they went on a social dinner with family and how they managed to still eat in small portions, while savouring every moment of that meal. This will act as a motivation to other readers when they are in a similar situation - relatedness under SDT.</p></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3">Month #3. - Running in the wild, all by yourself</summary><div class="indented"><p id="0c300e88-cd9c-4ead-a6cf-032453948839" class="">
+</p><figure id="e38e2d10-ab0e-4621-a856-d965f39cc369" class="image" style="text-align:center"><a href="https://images.unsplash.com/photo-1474947363373-576e7ef9eac5?ixlib=rb-4.0.3&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb"><img style="width:288px" src="https://images.unsplash.com/photo-1474947363373-576e7ef9eac5?ixlib=rb-4.0.3&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb"/></a></figure><p id="b1afdc25-eb41-47de-b15a-66ed86773420" class="">
+</p><p id="e5b1dbe6-2790-442b-930a-dee1cc49d313" class="">After practising the new lifestyle changes in 2nd month, there will be some increase in Neha’s perceived self control. </p><ul id="c4816d95-822b-4dc1-8317-16fab6c3255c" class="bulleted-list"><li style="list-style-type:disc">At this point, we will ask her to log changes in her attitude, perceived self image, new learnings and insight in a Notion template that we will give her. This journaling activity done after 2 months of skill practicing will help her self reflect the new lifestyle and what effect it has on her overall physical and mental health.</li></ul><p id="263bf8ba-7efc-4cfa-9684-88dd84d1863c" class=""><strong>Coach’s job</strong> : Help Neha in habit of setting higher goals, when previous are achieved. Setting higher goals have helps sustaining weight after hitting a plateau. eg going for jujitsu training, practising handstands, leading community walks or guiding other people from their experience. It can depend person to person and the session towards the later half of 3rd month will be devoted to help her set higher goals for herself. </p><ul id="01242c4f-f7ad-4345-93d9-865296de9f40" class="bulleted-list"><li style="list-style-type:disc">Towards the end of 3rd month, a peer buddy will be assigned to Neha from previous batch’s whatsapp group (those who have completed the training and have volunteered to be buddies). 
+This works in 2 ways -
+1) The assigned buddy now has a higher goal set - to help someone like her. Research has shown that setting higher goals such as leading other communities with changes, have lead to sustain healthy habits after hitting a plateau. 
+2) Neha has a support buddy to help her in times when she has failed for some reason and needs a coping mechanism. Seeking support from social groups aligned towards the same goals, has helped people cope with failure and avoid falling back to old patterns again. </li></ul><ul id="b2290fe4-ee94-4e49-b75a-471b6c42d8db" class="bulleted-list"><li style="list-style-type:disc">There will be a video session of all the peer groups towards the end of 3rd month. This session is done to end the course on a positive note, where everyone discusses the changes they’ve experienced and how it has impacted their lives.
+This works in 2 ways :
+1) Setting a positive ending tone of the program, so that people remember XYZ as a positive experience. 
+2) A virtual meeting of all peers will let them bond over common struggle in a more engaging manner. Since the program will end here, Neha can chose to stay in touch with her peers and organise real health meets together or even participate in marathons together ! Emotions are contagious and emotions of achievement and progress can be utilised in a way to further catalyse goal setting in peer groups.  </li></ul><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="ba856f2d-e448-4df9-b4cc-7f8bf0300987"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">The peak-end rule by Daniel is a cognitive bias that suggests people primarily remember and evaluate experiences based on the peak (the most intense or emotionally charged moment) and the end of the experience, rather than considering the experience as a whole. This bias can influence our perceptions and memories of various events, including emotional experiences, pain, or even the overall satisfaction of an experience.</div></figure><ul id="1c585ce1-84ed-4048-8b28-d9e4f84733c0" class="bulleted-list"><li style="list-style-type:disc">At the end of program, Neha will receive a report of her overall journey and progress through the program. Using her personal insights we will give her a well displayed information graph of all the learnings she achieved so far. Her triggers, how she managed them, which strategies worked best and her overall progress throughout. It will be like a report card to motivate and praise her efforts and also as a cheat sheet for her to refer after this course. Having a concrete report card in hand along with subjective changes in feelings and physical changes in weight, will keep her motivated to continue on the journey of healthy living.</li></ul></div></details><p id="da1f52cf-b73d-4a9c-83e4-d5527f74fcc1" class="">
+</p><p id="1d81294d-c3b8-460c-952f-c09cfcbd1c4c" class="block-color-red_background"><strong>Assumptions taken: </strong>Neha is following a diet plan and workout plan given to her already. This plan is just for developing behaviour change skills for healthy eating</p><p id="98163dce-7a15-46d0-bc1a-6045fd219ffb" class="">
+</p></div></article></body></html>
